@@ -1,24 +1,30 @@
-# web
+# 地基web站点
 
-## Project setup
-```
-yarn install
-```
+模块分为
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+### 用户
 
-### Compiles and minifies for production
-```
-yarn build
-```
+### 书籍
 
-### Lints and fixes files
-```
-yarn lint
-```
+todo
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+新建()
+编辑
+使用()
+
+
+### 评论
+
+评论考虑是否需要加入
+
+### 安装
+
+`yarn install`
+
+### 启动
+
+`yarn run dev`
+
+### 部署
+
+`yarn run build`
