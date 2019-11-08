@@ -7,6 +7,6 @@ declare module '*.vue' {
 declare module 'vue/types/vue' {
   import Vue from 'vue';
   interface Vue {
-    $Http: any,
+    $http: any
   }
 }
