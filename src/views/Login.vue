@@ -37,7 +37,22 @@ export default class Login extends Vue{
     handleSubmit(handleType: 'login' | 'signin') {
         console.log(handleType);
         this.loginForm.validateFields((err:string, values:object) => {
-
+            if(!err) {
+                // 登录
+                if(handleType == 'login') {
+                    this.$http.post('/api/user/create', values)
+                    .then(res => {
+                        console.log(res);
+                    })
+                } 
+                // 注册
+                if(handleType == 'signin') {
+                    this.$http.post('/api/user/create', values)
+                    .then(res => {
+                        console.log(res);
+                    })
+                }
+            }
         })
     }
 }
