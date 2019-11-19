@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
-import Cookies from 'js-cookie'
+import Cookies from 'js-cookie';
 
 Vue.use(VueRouter);
 
@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/login',
     name: 'login',
-    component: () => import('../views/Login.vue')
+    component: () => import('../views/Login.vue'),
   },
   {
     path: '/base',
@@ -22,10 +22,10 @@ const routes = [
     children: [
       {
         path: 'create',
-        component: () => import('../views/BaseCreate.vue')
-      }
-    ]
-  }
+        component: () => import('../views/BaseCreate.vue'),
+      },
+    ],
+  },
 ];
 
 const router = new VueRouter({
@@ -35,11 +35,11 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  if(Cookies.get('userToken') || to.path == '/login') {
-    next()
+  if (Cookies.get('userToken') || to.path === '/login') {
+    next();
   } else {
-    next('/login')
+    next('/login');
   }
-})
+});
 
 export default router;
