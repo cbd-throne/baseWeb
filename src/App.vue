@@ -5,18 +5,18 @@
       text="孙狗剩"
       tileWidth="300"
       tileHeight="200"
-      opacity="0.1"/>
+      opacity="0.5"/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld.vue';
-import WaterMark from 'vue-watermark';
+import watermark from 'vue-watermark';
 
 @Component({
   components: {
-    HelloWorld, WaterMark,
+    HelloWorld, watermark,
   },
 })
 export default class App extends Vue {}

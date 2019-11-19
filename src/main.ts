@@ -8,9 +8,9 @@ import fetchFn from './util/fetch';
 
 Vue.config.productionTip = false;
 Vue.use(Antd);
-Vue.use(v => {
+Vue.use((v) => {
   v.prototype.$http = fetchFn;
-})
+});
 
 new Vue({
   router,
